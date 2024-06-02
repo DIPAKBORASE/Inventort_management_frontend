@@ -1,0 +1,306 @@
+.dashboard-container {
+  height: 105vh;
+}
+
+.left-column {
+  width: 250px;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: block;
+  flex-direction: column;
+  height: 105vh;
+  overflow:auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  position:absolute;
+  z-index: 2; 
+  /* double layer  */
+  background-color: #f3f3f3; /* Slight grey background */
+}
+
+.logo-container {
+  display: flex;
+  margin-top: 0px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 100%; /* Adjust the logo width as needed */
+  margin-right: 10px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.menu-list li {
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: block; /*  click action on entire block if clicked*/
+  align-items: center;
+  border: 1px solid #ddd; /* Border for each element */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px;
+   /* Padding for each element */
+}
+
+.menu-list li:hover {
+  background-color: #e0e0e0;
+}
+
+.menu-list i {
+  margin-right: 10px;
+}
+
+.menu-list li.active {
+  background-color:  rgb(214, 184, 48);
+  /* Add any additional styling for the active state */
+}
+
+.main-content {
+  position:absolute;
+  flex:1;
+  padding: 20px;  
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  align-self: center;
+  align-self: center;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.dropdown-content li {
+  padding: 7px;
+  border-radius: 0;
+  margin: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-content li:hover {
+  background-color: #e0e0e0;
+}
+
+.show {
+  display: block;
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0%;
+  z-index: 1;
+  background-color: #f3f3f3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+  margin-right: auto; /* Push the user icon to the right */
+}
+
+.navbar-title h1 {
+  margin-left: 292px;
+  font-size: 20px; /* Adjust the font size as needed */
+}
+
+
+.user-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin-right: 12px;
+}
+
+.user-rank-tooltip {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  top: 100%;
+  padding: 10px;
+  display: none;
+}
+
+.user-icon:hover .user-rank-tooltip {
+  display: block;
+}
+ 
+.user-asset-section {
+  margin-top: 100px;
+  padding: 20px;
+}
+ 
+.user-asset-search-box {
+  display: flex;
+  width:20%;
+  align-items: center;
+  margin-left: 690px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.user-asset-search-input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.user-asset-search-btn {
+  padding: 7px 7px;
+  width: 10%;
+  background-color: #afa24c; /* Golden color */
+  color: #fff;
+  border: none;
+  border-radius:2px;
+  cursor: pointer;
+}
+
+.link-style {
+  text-decoration: none;
+  color: black;
+}
+
+.link-style:hover {
+  text-decoration: none; /* Show underline on hover if needed */
+}
+
+.user-asset-export-btn {
+  margin-left: 2122px;
+  margin-bottom: 7px;
+  width: 7%;
+  font-size: 12px;
+  padding: 4px 3px; /* Reduced size */
+  background-color: #afa24c; /* Golden color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-asset-table {
+width: 70%  ;
+border-collapse: collapse;
+margin-left:690px;  
+margin-bottom: 20px;
+overflow-x: auto; /* Add this to enable horizontal scrolling */
+}
+
+
+.user-asset-table td {
+border: 1px solid #ddd;
+font-size: smaller;
+padding: 10px 6px; /* Adjust padding as needed */
+text-align: left;
+}
+
+.user-asset-table th {
+  color: #afa24c;
+  border: 1px solid #ddd;
+  padding: 4px 6px; /* Adjust padding as needed */
+  background-color: #f2f2f2;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Increase the width of specific columns */
+.user-asset-table th:nth-child(2),
+.user-asset-table td:nth-child(2),
+.user-asset-table th:nth-child(3),
+.user-asset-table td:nth-child(3),
+.user-asset-table th:nth-child(4),
+.user-asset-table td:nth-child(4) {
+min-width: 50px; /* Adjust the width as needed */
+}
+
+
+.user-asset-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.user-asset-navigation {
+  display: flex;
+  width: 22%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 1790px;
+}
+
+.user-asset-navigation button {
+  padding: 4px 10px; /* Reduced size */
+  font-size: 13px;
+  background-color: #afa24c; /* Golden color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px; /* Add some spacing between buttons */
+}
+
+.user-asset-navigation label {
+  margin-right: 10px;
+}
+
+.user-asset-navigation select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.pagination button,
+.rows-per-page select {
+  flex: 1;
+  padding: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.pagination button:last-child,
+.rows-per-page select:last-child {
+  margin-right: 0;
+}
+
+.pagination button:hover,
+.rows-per-page select:hover {
+  background-color: #45a049;
+}
+
+.rows-per-page label {
+  margin-right: 10px;
+}

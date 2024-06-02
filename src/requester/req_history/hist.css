@@ -1,0 +1,443 @@
+/* InventoryDashboard.css */
+
+.dashboard-container {
+    height: 105vh;
+  }
+  
+  .left-column {
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: block;
+    flex-direction: column;
+    height: 105vh;
+    overflow:auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    position:absolute;
+    background-color: #f3f3f3; /* Slight grey background */
+  }
+  
+  .logo-container {
+    display: flex;
+    margin-top: 0px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .logo {
+    width: 100%; /* Adjust the logo width as needed */
+    margin-right: 10px;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .menu-list li {
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: block; /*  click action on entire block if clicked*/
+    align-items: center;
+    border: 1px solid #ddd; /* Border for each element */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px;
+     /* Padding for each element */
+  }
+  
+  .menu-list li:hover {
+    background-color: #e0e0e0;
+  }
+
+  .menu-list li.active {
+    background-color: rgb(214, 184, 48);
+    /* Add any additional styling for the active state */
+  }
+  
+  .menu-list i {
+    margin-right: 10px;
+  }
+  
+  .main-content {
+    position:absolute;
+    flex:1;
+    padding: 20px;  
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    align-self: center;
+    align-self: center;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .dropdown-content li {
+    padding: 7px;
+    border-radius: 0;
+    margin: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .dropdown-content li:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .show {
+    display: block;
+  }
+
+  .top-navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    position:fixed;
+    width:80%;
+    left:292px;
+    right: 0;
+    top: 0%;
+    background-color: #f3f3f3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .user-rank-tooltip {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: none;
+  }
+  
+  .user-icon:hover .user-rank-tooltip {
+    display: block;
+  }
+
+
+  .tabs {
+    display: flex;
+    margin-top:20px;
+    position:absolute;
+    left:-420px;
+
+  }
+  
+
+  .tabs:hover {
+    background-color: #d7b5ef;
+  }
+
+    
+
+  .active1 {
+    background-color: #6286bf;
+  }
+  
+
+  /* Add this to your existing CSS file */
+
+
+.vertical-line {
+  height: 80px;
+  border-left: 2px solid #ddd;
+  margin: 0 20px;
+}
+
+
+.hist-new-section2 {
+  position: fixed;
+  left: 320px;
+  top: 240px;
+}
+
+.hist-new-section h2 {
+  font-size: 24px;
+  margin-top: -20px;
+  margin-bottom: 7px;
+}
+
+.hist-form-fields-row {
+  display: flex;
+  margin-top:-20px;
+  flex-wrap: wrap;
+}
+
+.hist-form-field {
+  flex: 1;
+  margin-bottom: 5px;
+}
+
+.hist-form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.hist-form-field select,
+.hist-form-field input[type="date"] {
+  width: calc(100% - 20px); /* Adjust width as needed */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.hist-form-field button {
+  width: 100px; /* Adjust the width as needed */
+  padding: 10px;
+  background-color: #4caf50; /* Adjust the background color as needed */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hist-form-field button:hover {
+  background-color: #45a049; /* Adjust the hover color as needed */
+}
+
+.hist-circle-select {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.hist-circle-select label {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  margin-right: 11px;
+}   
+
+.hist-choose-product-field {
+  display: flex;
+  flex: 1;
+  margin-top: -19px;
+  margin-bottom: 23px;
+}
+
+.hist-choose-product-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.hist-choose-product-field select {
+  width: calc(100% - 20px); /* Adjust width as needed */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.purchase-order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: -20px;
+}
+
+.purchase-order-table th, .purchase-order-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: small;
+  text-align: left;
+}
+
+.purchase-order-table th {
+  color:  #afa24c;
+}
+
+.purchase-order-table th {
+  background-color: #f2f2f2;
+  font-size: 15px;
+
+}
+
+.purchase-order-table tbody tr:hover {
+  background-color: #f5f5f5;
+  
+}
+
+.purchase-order-table .edit-btn, .purchase-order-table .delete-btn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+
+.terms-and-conditions {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.white-box {
+  margin-top: -18px;
+  background-color: #fff;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+.histsearch-box {
+  display: flex;
+  width:60%;
+  align-items: center;
+  margin-left: -10px;
+  margin-bottom: 20px;
+
+}
+
+.histsearch-input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.histsearch-btn {
+  padding: 7px 7px;
+  width: 10%;
+  background-color: #afa24c; /* Golden color */
+  color: #fff;
+  border: none;
+  border-radius:2px;
+  cursor: pointer;
+}
+
+
+.histexport-btn {
+  margin-left: 942px;
+  margin-bottom: 7px;
+  width:14%;
+  font-size: 13px;
+  padding: 5px 1px; /* Reduced size */
+  background-color: #afa24c; /* Golden color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hist-table {
+margin-left: -10px;  
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 20px;
+overflow-x: auto; /* Add this to enable horizontal scrolling */
+}
+
+.hist-table th,
+.hist-table td {
+border: 1px solid #ddd;
+font-size: smaller;
+padding: 2px 5px; /* Adjust padding as needed */
+text-align: left;
+}
+
+.hist-table th {
+color: #afa24c;
+padding: 1px 13px; /* Adjust padding as needed */
+background-color: #f2f2f2;
+font-size: 14px;
+}
+
+/* Increase the width of specific columns */
+.hist-table th:nth-child(4),
+.hist-table td:nth-child(4),
+.hist-table th:nth-child(5),
+.hist-table td:nth-child(5) {
+min-width:180px; /* Adjust the width as needed */
+}
+
+
+.hist-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.hist-navigation {
+  display: flex;
+  width: 38%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 690px;
+}
+
+.hist-navigation button {
+  padding: 5px 14px; /* Reduced size */
+  font-size: 13px;
+  background-color: #afa24c; /* Golden color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px; /* Add some spacing between buttons */
+}
+
+.hist-navigation label {
+  margin-right: 10px;
+}
+
+.hist-navigation select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.pagination button,
+.rows-per-page select {
+  flex: 1;
+  padding: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.pagination button:last-child,
+.rows-per-page select:last-child {
+  margin-right: 0;
+}
+
+.pagination button:hover,
+.rows-per-page select:hover {
+  background-color: #45a049;
+}
+
+.rows-per-page label {
+  margin-right: 10px;
+}
+
+/* Add more styling as needed */
